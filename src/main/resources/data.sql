@@ -1,0 +1,1 @@
+insert into user_details (username, first_name, last_name, balance) values ('Bchoo', 'Bryan', 'Choo', 50000);
