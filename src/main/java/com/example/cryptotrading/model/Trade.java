@@ -17,6 +17,19 @@ public class Trade {
     private double price;
     private LocalDateTime timestamp;
 
+    @Override
+    public String toString() {
+        return "Trade{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", tradeType='" + tradeType + '\'' +
+                ", symbol='" + symbol + '\'' +
+                ", amount=" + amount +
+                ", price=" + price +
+                ", timestamp=" + timestamp +
+                '}';
+    }
+
     // Getters and setters
     public String getSymbol() {
         return symbol;

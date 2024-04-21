@@ -10,17 +10,17 @@ public class Wallet {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String userName;
+    private String username;
     private String symbol;
     private double amount;
     private LocalDateTime timestamp;
 
     public String getUserName() {
-        return userName;
+        return username;
     }
 
-    public void setUserName(String userId) {
-        this.userName = userId;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getSymbol() {

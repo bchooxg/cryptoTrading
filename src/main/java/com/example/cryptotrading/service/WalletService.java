@@ -24,6 +24,18 @@ public class WalletService {
     public Price getLatestPrice(String symbol) {
         return priceRepository.getLatestPrice(symbol);
     }
+
+    public Wallet createWallet(Wallet wallet) {
+        return walletRepository.save(wallet);
+    }
+
+    public Wallet updateWallet (Wallet wallet){
+        return walletRepository.save(wallet);
+    }
+
+    public Wallet getWalletByUsernameAndSymbol(String userName, String symbol) {
+        return walletRepository.getWalletByUsernameAndSymbol(userName, symbol);
+    }
 }
 
 

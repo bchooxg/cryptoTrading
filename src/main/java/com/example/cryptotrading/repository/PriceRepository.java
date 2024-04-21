@@ -6,6 +6,6 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 public interface PriceRepository extends JpaRepository<Price, Long> {
-    @Query("SELECT p FROM Price p WHERE p.symbol = :symbol ORDER BY p.timestamp DESC")
+    @Query("SELECT p FROM Price p WHERE p.symbol = :symbol ORDER BY p.timestamp DESC LIMIT 1")
     Price getLatestPrice(@Param("symbol") String symbol);
 }

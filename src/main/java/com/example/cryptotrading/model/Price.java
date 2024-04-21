@@ -18,6 +18,17 @@ public class Price {
     private String exchange;
     private LocalDateTime timestamp;
 
+    public Price() {
+    }
+
+    public Price(String symbol, double bidPrice, double askPrice, String exchange, LocalDateTime timestamp) {
+        this.symbol = symbol;
+        this.bidPrice = bidPrice;
+        this.askPrice = askPrice;
+        this.exchange = exchange;
+        this.timestamp = timestamp;
+    }
+
     // Getters and setters
 
 

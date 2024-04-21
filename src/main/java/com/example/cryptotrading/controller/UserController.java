@@ -13,11 +13,17 @@ public class UserController {
     private UserRepository userRepository;
 
     // API to retrieve user information by user ID
-    @GetMapping("/users/id/{userId}")
-    public User getUserById(@PathVariable Long userId) {
+    @GetMapping("/users/{username}")
+    public User getUserById(@PathVariable String username) {
 
-        return userRepository.findById(userId)
-                .orElseThrow(() -> new RuntimeException("User not found"));
+        User user = userRepository.getUserByUsername(username);
+
+        // Throw exception if user not found
+        if (user == null) {
+            throw new RuntimeException("User not found");
+        }
+
+        return userRepository.getUserByUsername(username);
     }
     //// Get user information by username
     //@GetMapping("/users/username/{username}")
