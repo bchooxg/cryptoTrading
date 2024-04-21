@@ -1,6 +1,5 @@
 package com.example.cryptotrading.repository;
 
-import com.example.cryptotrading.model.Price;
 import com.example.cryptotrading.model.Wallet;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

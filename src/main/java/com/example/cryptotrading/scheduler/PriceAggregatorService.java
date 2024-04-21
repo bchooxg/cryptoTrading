@@ -13,7 +13,6 @@ import org.springframework.web.client.RestTemplate;
 import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
 import java.util.stream.Collectors;
 
 @Service
@@ -50,6 +49,7 @@ public class PriceAggregatorService {
         //System.out.println(response.getBody());
 
         List<HuobiItem> data = response.getBody().getData();
+
         //Filter the response to only include the symbols we care about
         List<HuobiItem> filteredItems = data.stream()
                 .filter(item -> SYMBOLS.contains(item.getSymbol().toUpperCase()))
